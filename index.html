@@ -9,11 +9,13 @@
         <script src="https://kit.fontawesome.com/65614f9700.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet"><link rel="icon" type="image/png" href="imgs/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="imgs/favicon.png"/>
         <link rel="stylesheet" href="style.css">
         <script src="main.js" defer=""></script>
     </head>
     <body>
+    
         <!-- Navbar -->
         <nav id="navbar">
             <div class="navbar__logo">
@@ -22,7 +24,7 @@
             </div>
             <div class="navbar__menu">
                 <ul class="navbar__menu">
-                    <li class="navbar__menu__item active">Home</li>
+                    <li class="navbar__menu__item active"><a href="#">Home</a></li>
                     <li class="navbar__menu__item">About</li>
                     <li class="navbar__menu__item">Skills</li>
                     <li class="navbar__menu__item">My work</li>
@@ -40,7 +42,7 @@
         </section>
 
         <!-- About -->
-        <section id="about" class="section">
+        <section id="about" class="section section__container">
             <h1>About me</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Repudiandae facere atque accusantium provident porro 
@@ -83,6 +85,7 @@
 
         <!-- skills -->
         <section id="skills" class="section">
+        <div class="section__container">
             <h1>Skills</h1>
             <h2>Skill & Attributes</h2>
             <p>
@@ -99,7 +102,7 @@
                             <span>90%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value">
+                            <div class="skill__value" style="width: 90%">
 
                             </div>
                         </div>
@@ -110,7 +113,7 @@
                             <span>85%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value">
+                            <div class="skill__value" style="width: 85%">
                                 
                             </div>
                         </div>
@@ -121,18 +124,18 @@
                             <span>70%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value">
+                            <div class="skill__value" style="width: 70%">
                                 
                             </div>
                         </div>
                     </div>
                     <div class="skill">
                         <div class="skill_description">
-                            <span>adobe photoshop</span>
+                            <span>Adobe photoshop</span>
                             <span>90%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value">
+                            <div class="skill__value" style="width: 90%">
                                 
                             </div>
                         </div>
@@ -140,10 +143,10 @@
                 </div>
                 <div class="skillset__right">
                     <div class="tools">
-                        <h3 class="tools__title">Tools</h3>
+                        <h3 class="skillset__title">Tools</h3>
                         <ul class="tools__list">
                             <li><span>Visual Studio Code</span></li>
-                            <li><span>adobe photoshop</span></li>
+                            <li><span>Adobe photoshop</span></li>
                             <li><span>MS excel</span></li>
                             <li><span>MS word</span></li>
                             <li><span>git.</span></li>
@@ -158,71 +161,62 @@
                         </ul>
                     </div>
                 </div>
+                
             </div>
+        </div>
         </section>
-
         <!-- work -->
-        <section id="work" class="section">
+        <section id="work" class="section section__container">
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn">ALL<span class="category__count">3</span></button>
-                <button class="category__btn">Front-end<span class="category__count">3</span></button>
-                <button class="category__btn">Disgin<span class="category__count">3</span></button>
+                <button class="category__btn active">ALL <span class="category__count"> 3</span></button>
+                <button class="category__btn">Front-end <span class="category__count"> 3</span></button>
+                <button class="category__btn">Disgin <span class="category__count"> 3</span></button>
             </div>
 
             <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects1</h3>
                         <span>clone coding with HTML and CSS</span>
                     </div>
                 </a>
-            </div>
 
-            <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects2</h3>
                         <span>clone coding with HTML and CSS</span>
                     </div>
                 </a>
-            </div>
 
-            <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects3</h3>
                         <span>clone coding with HTML and CSS</span>
                     </div>
                 </a>
-            </div>
 
-            <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects4</h3>
                         <span>clone coding with HTML and CSS</span>
                     </div>
                 </a>
-            </div>
 
-            <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects5</h3>
                         <span>clone coding with HTML and CSS</span>
                     </div>
                 </a>
-            </div>
 
-            <div class="work__projects">
-                <a href="#" class="project__img" target="blank">
+                <a href="#" class="project" target="blank">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects6</h3>
@@ -234,29 +228,36 @@
 
         <!-- testimonials -->
         <section id="testimonials" class="section">
-            <h1>Testimonials</h1>
-            <h3>see what they say about me</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="imgs/people.jpg" alt="" class="testimonial_avatar">
-                    <div class="testimonials_speech-bubble">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quo voluptatum dolor quae. Placeat commodi 
-                        quia dolores, incidunt facilis doloremque fugiat laboriosam 
-                        deleniti voluptatum eum sed, fugit nostrum ducimus ipsum debitis?
+            <div class="section__container">
+                <h1>Testimonials</h1>
+                <h3>see what they say about me</h3>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <img src="imgs/people.jpg" alt="" class="testimonial_avatar">
+                        <div class="testimonials_speech-bubble">
+                            <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quo voluptatum dolor quae. Placeat commodi 
+                            quia dolores, incidunt facilis doloremque fugiat laboriosam 
+                            deleniti voluptatum eum sed, fugit nostrum ducimus ipsum debitis?
+                            </p>
+                            <p class="name"><a href="#">Ellie</a></p>
+                        </div>
+                        
                     </div>
-                    <p class="name"><a href="#">Ellie</a></p>
-                </div>
-
-                <div class="testimonial">
-                    <img src="imgs/people.jpg" alt="" class="testimonial_avatar">
-                    <div class="testimonials_speech-bubble">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quo voluptatum dolor quae. Placeat commodi 
-                        quia dolores, incidunt facilis doloremque fugiat laboriosam 
-                        deleniti voluptatum eum sed, fugit nostrum ducimus ipsum debitis?
+    
+                    <div class="testimonial">
+                        <div class="testimonials_speech-bubble">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quo voluptatum dolor quae. Placeat commodi 
+                                quia dolores, incidunt facilis doloremque fugiat laboriosam 
+                                deleniti voluptatum eum sed, fugit nostrum ducimus ipsum debitis?
+                            </p>
+                            <p class="name"><a href="#">json</a></p>
+                        </div>
+                        <img src="imgs/people.jpg" alt="" class="testimonial_avatar">
                     </div>
-                    <p class="name"><a href="#">json</a></p>
                 </div>
             </div>
         </section>
