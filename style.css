@@ -93,11 +93,21 @@ p {
 
 #navbar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  background-color: #fe918d;
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  position: fixed;
+  transition: all 0.4s ease-in-out;
+}
+
+#navbar.navbar__dark {
+  background-color: var(--color-pink);
+  opacity: 80%;
+  padding: 4px;
+  z-index: 99;
 }
 
 .navbar__logo {
@@ -139,6 +149,7 @@ p {
   background: url("imgs/homebackground-200515-154505.png") center/cover
     no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
