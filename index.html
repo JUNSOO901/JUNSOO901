@@ -15,23 +15,21 @@
         <script src="main.js" defer=""></script>
     </head>
     <body>
-    
         <!-- Navbar -->
         <nav id="navbar">
             <div class="navbar__logo">
                 <i class="fas fa-moon"></i>
                 <a href="#">K.JUN</a>
             </div>
-            <div class="navbar__menu">
-                <ul class="navbar__menu">
-                    <li class="navbar__menu__item active" data-link="#home">Home</li>
-                    <li class="navbar__menu__item" data-link="#about">About</li>
-                    <li class="navbar__menu__item" data-link="#skills">Skills</li>
-                    <li class="navbar__menu__item" data-link="#work">My work</li>
-                    <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
-                    <li class="navbar__menu__item" data-link="#contact">Contact</li>
-                </ul>
-            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item active" data-link="#home">Home</li>
+                <li class="navbar__menu__item" data-link="#about">About</li>
+                <li class="navbar__menu__item" data-link="#skills">Skills</li>
+                <li class="navbar__menu__item" data-link="#work">My work</li>
+                <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+                <li class="navbar__menu__item" data-link="#contact">Contact</li>
+            </ul>
+            
 
             <!-- To toogle -->
             <button class="navbar__toogle-btn">
@@ -40,10 +38,12 @@
         </nav>
         <!-- Home -->
         <section class="home" id="home">
-            <img src="imgs/profile.jpg" alt="Junsoo's profile photo" class="home__avatar">
-            <h1 class="home__title">Hello!<br>K.JunSoo's Portfolio</h1>
-            <h2 class="home__description">프론트엔드 웹 개발자를 꿈꾸는 김준수입니다</h2>
-            <button class="home__contact" data-link="#contact">Contact me</button>
+            <div class="home_container">
+                <img src="imgs/profile.jpg" alt="Junsoo's profile photo" class="home__avatar">
+                <h1 class="home__title">Hello!<br>K.JunSoo's Portfolio</h1>
+                <h2 class="home__description">프론트엔드 웹 개발자를 꿈꾸는 김준수입니다</h2>
+                <button class="home__contact" data-link="#contact">Contact me</button>
+            </div>
         </section>
 
         <!-- About -->
@@ -175,13 +175,13 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">ALL <span class="category__count"> 3</span></button>
-                <button class="category__btn">Front-end <span class="category__count"> 3</span></button>
-                <button class="category__btn">Disgin <span class="category__count"> 3</span></button>
+                <button class="category__btn selected" data-filter="*">ALL <span class="category__count"> 6</span></button>
+                <button class="category__btn" data-filter="Front-end">Front-end <span class="category__count"> 3</span></button>
+                <button class="category__btn" data-filter="Disign">Disign <span class="category__count"> 3</span></button>
             </div>
 
             <div class="work__projects">
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Front-end">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects1</h3>
@@ -189,7 +189,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Front-end">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects2</h3>
@@ -197,7 +197,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Front-end">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects3</h3>
@@ -205,7 +205,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Disign">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects4</h3>
@@ -213,7 +213,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Disign">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects5</h3>
@@ -221,7 +221,7 @@
                     </div>
                 </a>
 
-                <a href="#" class="project" target="blank">
+                <a href="#" class="project" target="blank" data-type="Disign">
                     <img src="imgs/favicon.png" class="project__img" alt="#">
                     <div class="project__description">
                         <h3>projects6</h3>
@@ -285,5 +285,10 @@
                 Thank you for looking at the portfolio.
             </p>
         </section>
+
+        <!-- Arrow up -->
+        <button class="Arrow-up">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </body>
 </html>
