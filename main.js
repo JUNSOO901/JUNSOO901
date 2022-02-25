@@ -12,8 +12,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
-
 // handle scrolling when tapping on the navbar menu
 // 누르면 그 위치로 부드럽게 스크롤링 scrollIntoView() 사용.
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -24,7 +22,8 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-    navbarMenu.classList.remove('open'); // 목록 으로 이동시 스몰버전일시 네비바가 사라짐
+    // 목록 으로 이동(클릭)시 스몰버전일시 네비바가 사라짐
+    navbarMenu.classList.remove('open'); 
     scrollIntoView(link)
 // navbar botton 'click' in the active     
     const navbarMenuitem_active = document.querySelector('.navbar__menu__item.active');
@@ -51,6 +50,29 @@ const home = document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight*1;
+
+// 스크롤링시 해당하는 위치의 네비바의 "open" 클래스를 추가
+})
+document.addEventListener('scroll', () => {
+    const home = document.querySelector('#home');
+    const homeHeight = home.getBoundingClientRect().height;
+    const about = document.querySelector('#about');
+    const aboutHeight = about.getBoundingClientRect().height;
+    const skills = document.querySelector('#skills');
+    const skillsHeight = skills.getBoundingClientRect().height;
+    const work = document.querySelector('#work');
+    const workHeight = work.getBoundingClientRect().height;
+    const testimonials = document.querySelector('#testimonials');
+    const testimonialsHeight = testimonials.getBoundingClientRect().height;
+    const contact = document.querySelector('#contact');
+    const contactHeight = contact.getBoundingClientRect().height;
+
+    if (window.scrollY < homeHeight) {
+        navbarMenuitem.classList.add('active');
+    } else {
+        navbarMenuitem.classList.remove('active');
+    }
+    
 })
 
 // show arrow up button when scrolling down
@@ -70,7 +92,8 @@ ArrowUp.addEventListener('click', () => {
     scrollIntoView('#home')
 });
 
-// project
+// project filter selection
+// 프로젝트 카테고리 탭 필터링 & 애니메이션
 const workcategories = document.querySelector('.work__categories');
 const project = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -79,11 +102,11 @@ workcategories.addEventListener('click', (event) => {
     if(filter == null) {
         return;
     }
-
+// 카테고리 탭 "Selection"
     const active = document.querySelector('.category__btn.selected');
     active.classList.remove('selected');
     event.target.classList.add('selected');
-
+// 카테고리 탭 필터링 전환 애니메이션
     project.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
