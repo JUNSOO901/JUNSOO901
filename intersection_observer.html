@@ -47,12 +47,19 @@
     <script>
       const boxes = document.querySelectorAll('.box');
 
+      const options = {
+        root:null, // viewport
+        rootMargin: '0px',
+        threshold: 1, // 0~1 (100%)
+
+      }
+
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if(entry.isIntersecting) {
-            console.log(entry.target)
+            entry.target.classList.add('active')
           } else {
-            console.error(entry.target)
+            entry.target.classList.remove('active')
           }
         })
       });
