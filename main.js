@@ -53,27 +53,7 @@ document.addEventListener('scroll', () => {
 
 // 스크롤링시 해당하는 위치의 네비바의 "open" 클래스를 추가
 })
-document.addEventListener('scroll', () => {
-    const home = document.querySelector('#home');
-    const homeHeight = home.getBoundingClientRect().height;
-    const about = document.querySelector('#about');
-    const aboutHeight = about.getBoundingClientRect().height;
-    const skills = document.querySelector('#skills');
-    const skillsHeight = skills.getBoundingClientRect().height;
-    const work = document.querySelector('#work');
-    const workHeight = work.getBoundingClientRect().height;
-    const testimonials = document.querySelector('#testimonials');
-    const testimonialsHeight = testimonials.getBoundingClientRect().height;
-    const contact = document.querySelector('#contact');
-    const contactHeight = contact.getBoundingClientRect().height;
 
-    if (window.scrollY < homeHeight) {
-        navbarMenuitem.classList.add('active');
-    } else {
-        navbarMenuitem.classList.remove('active');
-    }
-    
-})
 
 // show arrow up button when scrolling down
 // 아래로 스크롤시 맨위 버튼이 보여짐
@@ -121,11 +101,6 @@ workcategories.addEventListener('click', (event) => {
 })
 
 
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-}
-
 // 1. 모든 섹션 요소들을 가지고 온다.
 // 2. IntersctionObserver를 이용해서 모든 섹션요소들을 관찰한다.
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 한다.
@@ -151,6 +126,18 @@ const sectionIds = [
     selectedNavItem.classList.add('active');
   }
   
+  function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
+  }
+
+  window.addEventListener('load', () => {
+
+    selectNavItem(navItems[selectedNavIdx]);
+  
+  });
+
   const observerOptions = {
     root: null,
     rootMargin: '0px',
